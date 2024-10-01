@@ -1,0 +1,43 @@
+.bgcolor {
+  background-color: rgb(245, 245, 252);
+}
+
+.responsiveDesign {
+  padding: 5vh 10vw;
+  color: rgb(54, 69, 79);
+  background-color: rgb(245, 245, 252);
+  font-size: 30px;
+  text-align: center;
+}
+
+.responsiveDesign h1 {
+  padding-top: 3vh;
+  font-size: 45px;
+  transition: color 0.5s linear;
+}
+
+.responsiveDesign h1:hover {
+  color: rgb(0, 0, 0);
+  transition: color 0.5s linear;
+}
+
+.responsiveDesign p {
+  padding-top: 5vh;
+  font-size: 33px;
+  transition: color 0.5s linear;
+}
+
+.responsiveDesign p:hover {
+  color: rgb(0, 0, 0);
+  transition: color 0.5s linear;
+}
+
+.responsiveDesign img {
+  width: 100%;
+  transition: transform 0.2s linear;
+}
+
+.responsiveDesign img:hover {
+  transition: transform 0.2s linear;
+  transform: scale(1.05);
+}

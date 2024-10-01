@@ -1,0 +1,46 @@
+/* #root {
+} */
+
+.app {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.typescriptSvg {
+  color: white;
+  width: 50px;
+  height: 50px;
+}
+
+.projects {
+  border: 1px solid blue;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  height: 100px;
+  width: 100%;
+  margin: 15px 0px;
+}
+
+.footer {
+  border: 1px solid yellow;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  height: 120px;
+  width: 100%;
+  margin: 15px 0px;
+}
+
+.nameAndSocials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}

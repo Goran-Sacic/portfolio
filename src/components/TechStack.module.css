@@ -1,0 +1,202 @@
+.techStackContainer,
+.techStackContainer2 {
+  background-color: rgb(239, 239, 255);
+  color: rgb(0, 43, 87);
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.techStackContainer h2,
+.techStackContainer2 h2 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.techStackContainer h3,
+.techStackContainer2 h3 {
+  font-weight: bold;
+  font-size: 27px;
+}
+
+.techStackContainer p,
+.techStackContainer2 p {
+  font-size: 22px;
+}
+
+.techStackContainer2 {
+  padding-top: 6vh;
+  justify-content: space-between;
+}
+
+.horizontalLine {
+  width: 100%;
+  border-bottom: 2px solid rgb(0, 43, 87);
+  margin-bottom: 25px;
+  padding: 5px;
+}
+
+.techStack,
+.techStack2 {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 15px 0px;
+  gap: 20px;
+  height: 100%;
+}
+
+.techStack div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 30%;
+  transition: transform 0.2s linear;
+}
+
+.techStack div:hover,
+.techStack2 div:hover {
+  color: blueviolet;
+  transform: scale(1.05);
+}
+
+.techStack2 div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  width: 45%;
+  transition: transform 0.2s linear;
+}
+
+.fontAwesome {
+  color: 'rgb(50, 50, 50)';
+}
+
+.fontAwesome:hover {
+  color: blueviolet;
+}
+
+.frontendCode {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(245, 245, 252);
+  color: black;
+  padding: 10vh 10vw;
+}
+
+.animate {
+  opacity: 1;
+}
+
+.frontendImg {
+  flex: 1;
+  max-width: 80%;
+  transition: transform 0.2s linear;
+}
+
+.frontendImg:hover {
+  transition: transform 0.2s linear;
+  transform: scale(1.1);
+}
+
+.frontendImg img {
+  width: 80%;
+  max-height: 550px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.frontendDesc {
+  flex: 1;
+  max-width: 45%;
+  padding-left: 50px;
+}
+
+.frontendDesc h2 {
+  font-size: 45px;
+  padding-bottom: 2vh;
+  color: rgb(54, 69, 79);
+}
+
+.frontendDesc p {
+  font-size: 22px;
+  color: rgb(54, 69, 79);
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1130px) {
+  .techStack div {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .techStack div {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .techStack div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 660px) {
+  .techStack2 div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1425px) {
+  .frontendCode {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .frontendImg {
+    max-width: 100%;
+  }
+
+  .frontendImg img {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .frontendDesc {
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .frontendDesc h2 {
+    font-size: 36px;
+  }
+
+  .frontendDesc p {
+    font-size: 20px;
+  }
+}
