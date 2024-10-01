@@ -38,7 +38,7 @@ const Contact = () => {
 
   useEffect(() => {
     emailjs.init(
-      import.meta.env.VITE_EMAIL_USER_ID || process.env.EMAIL_USER_ID
+      import.meta.env.VITE_EMAIL_USER_ID || import.meta.env.EMAIL_USER_ID
     );
   }, []);
 
@@ -52,13 +52,15 @@ const Contact = () => {
     e.preventDefault();
     setShowSuccessMessage(false);
     emailjs.init(
-      import.meta.env.VITE_EMAIL_USER_ID || process.env.EMAIL_USER_ID
+      import.meta.env.VITE_EMAIL_USER_ID || import.meta.env.EMAIL_USER_ID
     );
     try {
       setLoading(true);
       await emailjs.send(
-        import.meta.env.VITE_EMAIL_SERVICE_ID || process.env.EMAIL_SERVICE_ID,
-        import.meta.env.VITE_EMAIL_TEMPLATE_ID || process.env.EMAIL_TEMPLATE_ID,
+        import.meta.env.VITE_EMAIL_SERVICE_ID ||
+          import.meta.env.EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID ||
+          import.meta.env.EMAIL_TEMPLATE_ID,
         {
           name: formData.name,
           email: formData.email,
