@@ -27,7 +27,7 @@ const contactTexts: SupportedLanguages = {
     submitting: 'Submitting...',
   },
   cro: {
-    title: 'CONTACT',
+    title: 'KONTAKT',
     description:
       'Slobodno me kontaktirajte slanjem obrasca ispod i javit ću Vam se što je prije moguće',
     successMessage: 'Poruka uspješno poslana!',
