@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
 .headerTop {
   position: sticky;
   top: 0;
@@ -9,12 +11,25 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 10vw;
+  padding: 5px 5vw;
   height: 90px;
   width: 100%;
-  background-color: rgb(24, 24, 24);
-  /* position: sticky; */
-  /* top: 0; */
+  background-color: rgba(0, 4, 24, 0.9);
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease-in;
+}
+
+.header:hover,
+.header-active {
+  background-color: rgb(0, 4, 24);
+}
+
+.signature {
+  font-family: 'Alex Brush', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  color: rgb(190, 220, 255);
 }
 
 .logo {
@@ -44,12 +59,8 @@
   font-size: 25px;
   position: relative;
   display: inline-block;
-  color: rgb(255, 255, 255);
+  color: rgb(190, 220, 255);
   text-decoration: none;
-}
-
-.navigation a:hover {
-  color: silver;
 }
 
 .navigation a::after {
@@ -59,8 +70,7 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  /* background-color: silver; */
-  background-color: red;
+  background-color: rgb(190, 220, 255);
   transition: width 0.2s ease;
 }
 
@@ -82,34 +92,38 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
-  width: 35px;
+  width: 37px;
 }
 
 .showMenu {
   opacity: 1;
   height: 4px;
   width: 35px;
-  background-color: white;
+  background-color: rgb(190, 220, 255);
   margin: 4px 0;
-  transition: transform 0.5s;
   transform-origin: top left;
   transform: rotate(45deg);
+  transition:
+    transform 0.5s,
+    width 0s;
 }
 
 .showMenu2 {
   opacity: 1;
   height: 4px;
   width: 35px;
-  background-color: white;
+  background-color: rgb(190, 220, 255);
   margin: 4px 0;
-  transition: transform 0.5s;
   transform-origin: bottom left;
   transform: rotate(-45deg);
+  transition:
+    transform 0.5s,
+    width 0s;
 }
 
 .hideMenu {
   height: 4px;
-  background-color: white;
+  background-color: rgb(190, 220, 255);
   margin: 4px 0;
   transition: transform 0.5s;
   transform-origin: top left;
@@ -119,7 +133,7 @@
 
 .hideMenu2 {
   height: 4px;
-  background-color: white;
+  background-color: rgb(190, 220, 255);
   margin: 4px 0;
   transition: transform 0.5s;
   transform-origin: bottom left;
@@ -128,28 +142,28 @@
 
 .hideLine {
   height: 4px;
-  background-color: white;
+  background-color: rgb(190, 220, 255);
   margin: 4px 0;
   animation: hide 0.5s linear forwards;
 }
 
 .noLine {
   height: 4px;
-  background-color: white;
+  background-color: rgb(190, 220, 255);
   margin: 4px 0;
   animation: hide 0s linear forwards;
 }
 
 .showLine {
   height: 4px;
-  background-color: white;
+  background-color: rgb(190, 220, 255);
   margin: 4px 0;
   animation: show 0.5s linear forwards;
 }
 
 .showLineFirstRender {
   height: 4px;
-  background-color: white;
+  background-color: rgb(190, 220, 255);
   margin: 4px 0;
 }
 
@@ -173,7 +187,8 @@
     top: 80px;
     left: 0;
     right: 0;
-    background-color: rgb(24, 24, 24);
+    background-color: rgba(0, 4, 24, 0.98);
+    backdrop-filter: blur(0px);
     padding: 20px;
     overflow: hidden;
     transition:
@@ -245,5 +260,21 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 460px) {
+  .showMenu,
+  .showMenu2 {
+    position: relative;
+    right: -2px;
+  }
+}
+
+@media (max-width: 384px) {
+  .showMenu,
+  .showMenu2 {
+    position: relative;
+    right: -4px;
   }
 }

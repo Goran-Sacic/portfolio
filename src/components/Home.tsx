@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import styles from './Home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import frontendDeveloper from '../assets/images/frontend-developer.png';
 import { LanguageContext } from '../contexts/LanguageContext';
 import homeTexts from '../texts/HomeTexts';
+import MyFace from '../assets/images/leMe2.png';
 
 const Home = () => {
   const languageContext = useContext(LanguageContext);
@@ -42,11 +42,8 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div className={styles.mainContentDiv2}>
-          <img
-            src={frontendDeveloper}
-            alt="Frontend developer technologies"
-          ></img>
+        <div className={styles.myImgContainer}>
+          <img className={styles.myImg} src={MyFace} />
         </div>
       </div>
     </div>

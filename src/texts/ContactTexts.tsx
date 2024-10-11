@@ -16,9 +16,9 @@ interface SupportedLanguages {
 
 const contactTexts: SupportedLanguages = {
   eng: {
-    title: 'CONTACT',
+    title: 'Send me a message!',
     description:
-      'Feel free to Contact me by submitting the form below and I will get back to you as soon as possible',
+      'Feel free to Contact me by submitting the form and I will get back to you as soon as possible.',
     successMessage: 'Message sent successfully!',
     name: 'Name',
     email: 'Email',
@@ -27,9 +27,9 @@ const contactTexts: SupportedLanguages = {
     submitting: 'Submitting...',
   },
   cro: {
-    title: 'KONTAKT',
+    title: 'Pošaljite mi poruku!',
     description:
-      'Slobodno me kontaktirajte slanjem obrasca ispod i javit ću Vam se što je prije moguće',
+      'Slobodno me kontaktirajte slanjem obrasca i javit ću Vam se što je prije moguće.',
     successMessage: 'Poruka uspješno poslana!',
     name: 'Ime',
     email: 'E-pošta',

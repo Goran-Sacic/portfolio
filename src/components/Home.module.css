@@ -1,17 +1,20 @@
 .mainContent {
-  background-color: rgb(245, 245, 252);
-  color: black;
+  background-color: rgb(240, 248, 255);
+  color: rgb(0, 30, 65);
   display: flex;
+  flex-direction: row;
   align-items: center;
-  padding-top: 70px;
-  padding-bottom: 70px;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
   height: auto;
   width: 100%;
+  justify-content: space-between;
 }
 
 .mainContentDiv {
+  order: 1;
   width: 45%;
   height: 100%;
   display: flex;
@@ -20,61 +23,52 @@
   animation: appear 1s linear;
 }
 
-.mainContentDiv2 {
-  width: 55%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  animation: appear 0.5s linear;
-}
-
-.mainContentDiv2 img {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 650px;
-  height: 90%;
-  max-height: 600px;
-  object-fit: contain;
-}
-
 .mainContent h1 {
   font-size: 75px;
-  color: rgb(54, 69, 79);
 }
 
 .mainContent h2 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: normal;
-  color: rgb(54, 69, 79);
 }
 
 .mainContent div h3 {
   font-size: 28px;
   font-weight: normal;
-  color: rgb(54, 69, 79);
 }
 
 .mainContentSocials {
   display: flex;
   justify-content: flex-start;
-  gap: 2vw;
+  gap: 1vw;
   width: 100%;
   padding-top: 2vh;
 }
 
 .fontAwesome {
-  color: rgb(54, 69, 79);
   width: 100%;
   transition: transform 0.2s linear;
   font-size: 40px;
 }
 
-.fontAwesome:hover {
-  color: rgb(75, 0, 130);
-  transition: transform 0.2s linear;
-  transform: scale(1.25);
+.myImgContainer {
+  order: 2;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px red;
+  border-radius: 50%;
+  padding: 2vh;
+}
+
+.myImg {
+  width: 100%;
+  position: relative;
+  border: 2px solid rgb(0, 43, 87);
+  border-radius: 50%;
 }
 
 @keyframes appear {
@@ -83,6 +77,12 @@
   }
   100% {
     opacity: 100%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .myImgContainer {
+    max-width: 500px;
   }
 }
 
@@ -98,11 +98,25 @@
   .mainContent div h3 {
     font-size: 24px;
   }
+  .myImgContainer {
+    width: 50%;
+    max-width: 450px;
+  }
 }
 
 @media (max-width: 1000px) {
+  .mainContent {
+    height: auto;
+    min-height: auto;
+  }
   .mainContent div h3 {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 810px) {
+  .mainContent h1 {
+    font-size: 45px;
   }
 }
 
@@ -111,15 +125,115 @@
     flex-direction: column;
     align-items: center;
     height: auto;
-    padding: 20px 5vw;
+    min-height: auto;
+    padding: 50px 5vw;
   }
-  .mainContentDiv,
-  .mainContentDiv2 {
+
+  .mainContent h2 {
+    font-size: 25px;
+    font-weight: normal;
+  }
+
+  .mainContent div h3 {
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .mainContentDiv {
+    order: 2;
     width: 90%;
     height: auto;
     margin: 0;
+    align-items: center;
+    text-align: center;
+    padding-top: 25px;
+  }
+  .myImgContainer {
+    order: 1;
+    max-width: 370px;
+    padding: 20px 0px;
+  }
+  .myImgContainer img {
+    min-width: 250px;
+  }
+  .mainContentSocials {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    width: 100%;
+    padding-top: 2vh;
   }
   .mainContentDiv2 img {
     width: 90%;
   }
+}
+
+.projectsContainer {
+  width: 100%;
+  padding: 6vh 6vw;
+  background-color: rgb(239, 239, 255);
+}
+
+.title {
+  font-size: 1.8em;
+  font-weight: 500;
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid rgba(0, 43, 87, 0.15);
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.project h1 {
+  font-size: 1.8em;
+}
+
+.project img {
+  width: 50%;
+  padding: 50px;
+}
+
+.projectInfo {
+  width: 50%;
+  padding: 0 40px;
+  border-left: 1px solid rgb(0, 43, 87, 0.15);
+}
+
+.projectInfo a {
+  text-decoration: none;
+}
+
+.projectInfo h1 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.projectInfo p {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 30px;
+  padding-top: 45px;
+}
+
+.fontAwesome {
+  color: rgb(0, 30, 65);
+  transition: transform 0.2s linear;
+}
+
+.fontAwesome:hover {
+  transform: scale(1.25);
+  color: rgb(0, 70, 160);
 }

@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+# Portfolio page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
+## Goran Sačić - Frontend Developer
 
 ```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+export default function helloWorld() {
+  console.log('Hello World - from G.S. portfolio!');
+}
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+A portfolio page for Frontend Developer Goran Sačić. Can also serve as a general example of portfolio page development. Site available @[goransacic.com](https://www.goransacic.com/).
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### v1.0 - Oct 1, 2024
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- The initial portfolio page launched with a clean and minimal design, featuring a Main section, Tech stack section, Project section, and Contact section, along with multilingual support for English and Croatian.
+
+### v2.0 Update - Oct 11, 2024.
+
+- Major improvements to overall design, color palette and functionalities.
+- Header now contains signature instead of an image.
+- Main section contains a personal image instead of a random image.
+- Tech stack section is now tabbed for screen sizes over 768px; for all other screen sizes it has been converted to two separated sections.
+- Excellence section now uses a card design.
+- Works/projects section is now a carousel.
+- Contact section contains more information, along with a submittable form.
+
+### Upcoming changes
+
+- Better CSS rules and classes throughout the app.
+- Further functionality additions and improvements.
+- Release: TBA.

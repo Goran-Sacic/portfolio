@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
 import styles from './Header.module.css';
-import mojLogo from '../assets/logos/kruzni-ja2.png';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -91,10 +90,10 @@ const Header = ({
 
   return (
     <div className={styles.headerTop}>
-      <div className={styles.header}>
-        <span className={styles.logo}>
-          <img src={mojLogo} />
-        </span>
+      <div
+        className={`${styles.header} ${open ? styles['header-active'] : ''}`}
+      >
+        <span className={styles.signature}>Goran</span>
         <div className={styles.navAndLangPicker}>
           <div>
             {isButtonVisible && (
@@ -106,7 +105,10 @@ const Header = ({
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
                 onMouseEnter={handleOpen}
-                sx={{ color: 'white', border: '1px solid white' }}
+                sx={{
+                  color: 'rgb(190, 220, 255);',
+                  border: '1px solid rgb(190, 220, 255);',
+                }}
                 endIcon={
                   <ArrowForwardIosIcon
                     sx={{
@@ -130,11 +132,23 @@ const Header = ({
                 onMouseLeave: handleClose,
               }}
               disableScrollLock={true}
+              sx={{
+                '& .MuiPaper-root': {
+                  backgroundColor: 'rgba(0, 4, 24)',
+                  color: 'rgb(190, 220, 255)',
+                  border: '1px solid rgb(190, 220, 255)',
+                },
+              }}
             >
               <MenuItem
                 onClick={() => {
                   handleClose();
                   setEnglishLanguage();
+                }}
+                sx={{
+                  '&:hover': {
+                    backgroundColor: 'rgb(0, 70, 160);',
+                  },
                 }}
               >
                 ENG
@@ -143,6 +157,11 @@ const Header = ({
                 onClick={() => {
                   handleClose();
                   setCroatianLanguage();
+                }}
+                sx={{
+                  '&:hover': {
+                    backgroundColor: 'rgb(0, 70, 160);',
+                  },
                 }}
               >
                 CRO
@@ -155,17 +174,18 @@ const Header = ({
           >
             {isMenuOpen && (
               <div>
-                <p>{languagePicker}</p>
+                <p style={{ color: 'rgb(190, 220, 255)' }}>{languagePicker}</p>
                 <div>
                   <FormGroup>
                     <FormControlLabel
+                      sx={{ color: 'rgb(190, 220, 255)' }}
                       control={
                         <Checkbox
                           size="large"
                           sx={{
-                            color: 'silver',
+                            color: 'rgb(190, 220, 255)',
                             '&.Mui-checked': {
-                              color: 'rgb(186, 181, 255)',
+                              color: 'rgb(190, 220, 255)',
                             },
                           }}
                           checked={language === 'eng'}
@@ -178,13 +198,14 @@ const Header = ({
                       label="ENG"
                     />
                     <FormControlLabel
+                      sx={{ color: 'rgb(190, 220, 255)' }}
                       control={
                         <Checkbox
                           size="large"
                           sx={{
-                            color: 'silver',
+                            color: 'rgb(190, 220, 255)',
                             '&.Mui-checked': {
-                              color: 'rgb(186, 181, 255)',
+                              color: 'rgb(190, 220, 255)',
                             },
                           }}
                           checked={language === 'cro'}

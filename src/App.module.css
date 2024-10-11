@@ -3,7 +3,9 @@
 
 .app {
   width: 100%;
-  margin: 0 auto;
+  max-width: 1500px;
+  margin: 20px auto;
+  box-shadow: rgb(123, 187, 255) 0px 0px 30px -5px;
 }
 
 .typescriptSvg {
@@ -43,4 +45,10 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .app {
+    margin: 0px;
+  }
 }

@@ -1,7 +1,8 @@
 .footerContainer {
   width: 100%;
-  background-color: rgb(24, 24, 24);
-  padding: 10vh 10vw;
+  background-color: rgba(0, 4, 24, 0.849);
+  color: rgb(190, 220, 255);
+  padding: 5vh 5vw;
 }
 
 .descAndSocials {
@@ -42,16 +43,16 @@
 }
 
 .socialsIcons a {
-  color: white;
+  color: rgb(190, 220, 255);
 }
 
 .socialsIcons a:hover {
-  color: silver;
+  color: rgb(0, 70, 160);
 }
 
 .divider {
   width: 100%;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(190, 220, 255);
 }
 
 .copyright {
@@ -62,5 +63,31 @@
 
 .copyright a {
   font-weight: bold;
-  color: white;
+  color: rgb(190, 220, 255);
+}
+
+.copyright a:hover {
+  color: rgb(0, 70, 160);
+}
+
+@media (max-width: 768px) {
+  .descAndSocials {
+    gap: 10px;
+  }
+  .desc {
+    width: 50%;
+    height: auto;
+  }
+  .socials {
+    width: 50%;
+  }
+}
+
+@media (max-width: 520px) {
+  p {
+    text-align: left;
+  }
+  .copyright p {
+    text-align: center;
+  }
 }

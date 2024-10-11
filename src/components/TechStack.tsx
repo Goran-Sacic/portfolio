@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import styles from './TechStack.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -6,109 +6,475 @@ import {
   faJs,
   faReact,
   faNodeJs,
+  faCss3,
 } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import frontendCodeImg from '../assets/images/frontend-code.jpg';
-import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.compat.css';
 import { LanguageContext } from '../contexts/LanguageContext';
 import techStackTexts from '../texts/TechStackTexts';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
+
+function CustomTabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && <Box sx={{ padding: '10px 0px' }}>{children}</Box>}
+    </div>
+  );
+}
+
+function a11yProps(index: number) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
 
 const TechStack = () => {
   const languageContext = useContext(LanguageContext);
   const { language } = languageContext;
 
   const {
-    HtmlCss,
+    LinkText,
+    LinkTextAfter,
+    Html,
+    Css,
     JsTs,
     React,
     NodejsExpressjs,
     FirebaseMongodb,
-    performanceOptimizationTitle,
-    performanceOptimizationDescription,
   } = techStackTexts[language] || techStackTexts['eng'];
+
+  const [value, setValue] = useState(0);
+
+  const handleChange = (
+    /* event */ _: React.SyntheticEvent,
+    newValue: number
+  ) => {
+    setValue(newValue);
+  };
+
+  const [isTabVisible, setIsTabVisible] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const currentWidth = window.innerWidth;
+      setIsTabVisible(currentWidth > 660);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div>
-      <div className={styles.techStackContainer}>
-        <div>
-          <h2>Frontend stack</h2>
-        </div>
-        <span className={styles.horizontalLine}></span>
-        <div className={styles.techStack}>
-          <div>
-            <FontAwesomeIcon
-              className={styles.fontAwesome}
-              icon={faHtml5}
-              style={{
-                fontSize: '80px',
+      <div className={styles.tab}>
+        {isTabVisible ? (
+          <Box>
+            <Box
+              sx={{
+                borderBottom: 1,
+                borderColor: 'rgba(0, 43, 87, 0.15);',
+                display: 'flex',
+                justifyContent: 'flex-start',
               }}
-            />
-            <h3>HTML&CSS</h3>
-            <p>{HtmlCss}</p>
-          </div>
-          <div>
-            <FontAwesomeIcon
-              className={styles.fontAwesome}
-              icon={faJs}
-              style={{ fontSize: '80px' }}
-            />{' '}
-            <h3>JavaScript&TypeScript</h3>
-            <p>{JsTs}</p>
-          </div>
-          <div>
-            <FontAwesomeIcon
-              className={styles.fontAwesome}
-              icon={faReact}
-              style={{ fontSize: '80px' }}
-            />{' '}
-            <h3>React</h3>
-            <p>{React}</p>
-          </div>
-        </div>
-      </div>
+            >
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="basic tabs example"
+                TabIndicatorProps={{
+                  style: {
+                    backgroundColor: 'rgb(0, 43, 87)',
+                  },
+                }}
+              >
+                <Tab
+                  label="Frontend stack"
+                  {...a11yProps(0)}
+                  sx={{
+                    color: 'rgba(0, 43, 87, 0.5);',
+                    marginRight: '50px',
+                    fontSize: '1.6em',
+                    fontWeight: 'bold',
+                    border: '2px solid transparent',
+                    '&.Mui-selected': {
+                      color: 'rgb(0, 43, 87);',
+                    },
+                    '&:hover': {
+                      borderBottom: '2px solid rgb(54, 69, 79);',
+                    },
+                  }}
+                />
+                <Tab
+                  label="Backend stack"
+                  {...a11yProps(1)}
+                  sx={{
+                    color: 'rgba(0, 43, 87, 0.5);',
+                    marginRight: '50px',
+                    fontSize: '1.6em',
+                    fontWeight: 'bold',
+                    border: '2px solid transparent',
+                    '&.Mui-selected': {
+                      color: 'rgb(0, 43, 87);',
+                    },
+                    '&:hover': {
+                      borderBottom: '2px solid rgb(54, 69, 79);',
+                    },
+                  }}
+                />
+              </Tabs>
+            </Box>
+            <CustomTabPanel value={value} index={0}>
+              <div className={styles.techStack}>
+                <a
+                  href="https://kinsta.com/knowledgebase/what-is-html/#what-is-html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    className={styles.fontAwesome}
+                    icon={faHtml5}
+                    style={{
+                      fontSize: '60px',
+                    }}
+                  />
+                  <h3>HTML</h3>
+                  <p>{Html}</p>
+                  <div>
+                    <p className={styles.textRight}>
+                      {LinkText}
+                      HTML{LinkTextAfter}
+                    </p>
+                    <FontAwesomeIcon
+                      className={styles.arrowRight}
+                      icon={faArrowRight}
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://en.wikipedia.org/wiki/CSS"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    className={styles.fontAwesome}
+                    icon={faCss3}
+                    style={{ fontSize: '60px' }}
+                  />{' '}
+                  <h3>CSS</h3>
+                  <p>{Css}</p>
+                  <div>
+                    <p className={styles.textRight}>
+                      {LinkText}
+                      CSS{LinkTextAfter}
+                    </p>
+                    <FontAwesomeIcon
+                      className={styles.arrowRight}
+                      icon={faArrowRight}
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://hygraph.com/blog/typescript-vs-javascript"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    className={styles.fontAwesome}
+                    icon={faJs}
+                    style={{ fontSize: '60px' }}
+                  />{' '}
+                  <h3>JavaScript&TypeScript</h3>
+                  <p>{JsTs}</p>
+                  <div>
+                    <p className={styles.textRight}>
+                      {LinkText}
+                      JavaScript&TypeScript{LinkTextAfter}
+                    </p>
+                    <FontAwesomeIcon
+                      className={styles.arrowRight}
+                      icon={faArrowRight}
+                    />
+                  </div>
+                </a>
+                <a href="https://react.dev/" target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon
+                    className={styles.fontAwesome}
+                    icon={faReact}
+                    style={{ fontSize: '60px' }}
+                  />{' '}
+                  <h3>React</h3>
+                  <p>{React}</p>
+                  <div>
+                    <p className={styles.textRight}>
+                      {LinkText}
+                      React{LinkTextAfter}
+                    </p>
+                    <FontAwesomeIcon
+                      className={styles.arrowRight}
+                      icon={faArrowRight}
+                    />
+                  </div>
+                </a>
+              </div>
+            </CustomTabPanel>
+            <CustomTabPanel value={value} index={1}>
+              <div className={styles.techStack}>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    className={styles.fontAwesome}
+                    icon={faNodeJs}
+                    style={{ fontSize: '60px' }}
+                  />
+                  <h3>NodeJS&ExpressJS</h3>
+                  <p>{NodejsExpressjs}</p>
+                  <div>
+                    <p className={styles.textRight}>
+                      {LinkText}
+                      NodeJS&ExpressJS{LinkTextAfter}
+                    </p>
+                    <FontAwesomeIcon
+                      className={styles.arrowRight}
+                      icon={faArrowRight}
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://www.mongodb.com/resources/basics/databases/nosql-explained"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    className={styles.fontAwesome}
+                    icon={faDatabase}
+                    style={{ fontSize: '60px' }}
+                  />{' '}
+                  <h3>Firebase/MongoDB</h3>
+                  <p>{FirebaseMongodb}</p>
+                  <div>
+                    <p className={styles.textRight}>
+                      {LinkText}
+                      Firebase/MongoDB{LinkTextAfter}
+                    </p>
+                    <FontAwesomeIcon
+                      className={styles.arrowRight}
+                      icon={faArrowRight}
+                    />
+                  </div>
+                </a>
+              </div>
+            </CustomTabPanel>
+          </Box>
+        ) : (
+          <Box>
+            <Box
+              sx={{
+                borderBottom: 1,
+                borderColor: 'rgb(0, 43, 87)',
+                display: 'flex',
+                justifyContent: 'flex-start',
+                marginBottom: '20px',
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: '1.7em',
+                  marginRight: '50px',
+                  fontWeight: 'bold',
+                  marginTop: '30px',
+                }}
+              >
+                FRONTEND STACK
+              </h2>
+            </Box>
+            <div className={styles.techStack}>
+              <a
+                href="https://kinsta.com/knowledgebase/what-is-html/#what-is-html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  className={styles.fontAwesome}
+                  icon={faHtml5}
+                  style={{ fontSize: '60px' }}
+                />
+                <h3>HTML</h3>
+                <p style={{ paddingBottom: '60px' }}>{Html}</p>
+                <div>
+                  <p className={styles.textRight}>
+                    {LinkText}
+                    HTML{LinkTextAfter}
+                  </p>
+                  <FontAwesomeIcon
+                    className={styles.arrowRight}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </a>
+              <a
+                href="https://en.wikipedia.org/wiki/CSS"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  className={styles.fontAwesome}
+                  icon={faCss3}
+                  style={{ fontSize: '60px' }}
+                />
+                <h3>CSS</h3>
+                <p style={{ paddingBottom: '60px' }}>{Css}</p>
+                <div>
+                  <p className={styles.textRight}>
+                    {LinkText}
+                    CSS{LinkTextAfter}
+                  </p>
+                  <FontAwesomeIcon
+                    className={styles.arrowRight}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </a>
+              <a
+                href="https://hygraph.com/blog/typescript-vs-javascript"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  className={styles.fontAwesome}
+                  icon={faJs}
+                  style={{ fontSize: '60px' }}
+                />
+                <h3>JavaScript & TypeScript</h3>
+                <p style={{ paddingBottom: '60px' }}>{JsTs}</p>
+                <div>
+                  <p className={styles.textRight}>
+                    {LinkText}
+                    JavaScript&TypeScript{LinkTextAfter}
+                  </p>
+                  <FontAwesomeIcon
+                    className={styles.arrowRight}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </a>
+              <a href="https://react.dev/" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon
+                  className={styles.fontAwesome}
+                  icon={faReact}
+                  style={{ fontSize: '60px' }}
+                />
+                <h3>React</h3>
+                <p style={{ paddingBottom: '60px' }}>{React}</p>
+                <div>
+                  <p className={styles.textRight}>
+                    {LinkText}
+                    React{LinkTextAfter}
+                  </p>
+                  <FontAwesomeIcon
+                    className={styles.arrowRight}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </a>
+            </div>
 
-      <div className={styles.frontendCode}>
-        <div className={styles.frontendImg}>
-          <ScrollAnimation animateIn="fadeIn" duration={2}>
-            <img
-              src={frontendCodeImg}
-              alt="A picture depicting frontend developer code - several lines of frontend code"
-            />{' '}
-          </ScrollAnimation>
-        </div>
+            <Box
+              sx={{
+                borderBottom: 1,
+                borderColor: 'rgb(0, 43, 87)',
+                display: 'flex',
+                justifyContent: 'flex-start',
+                marginTop: '50px',
+                marginBottom: '20px',
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: '1.7em',
+                  marginRight: '50px',
+                  fontWeight: 'bold',
+                  marginTop: '30px',
+                }}
+              >
+                BACKEND STACK
+              </h2>
+            </Box>
 
-        <div className={styles.frontendDesc}>
-          <h2>{performanceOptimizationTitle}</h2>
-          <p>{performanceOptimizationDescription}</p>
-        </div>
-      </div>
-
-      <div className={styles.techStackContainer2}>
-        <div>
-          <h2>Backend stack</h2>
-        </div>
-        <span className={styles.horizontalLine}></span>
-        <div className={styles.techStack2}>
-          <div>
-            <FontAwesomeIcon
-              className={styles.fontAwesome}
-              icon={faNodeJs}
-              style={{ fontSize: '80px' }}
-            />
-            <h3>NodeJS&ExpressJS</h3>
-            <p>{NodejsExpressjs}</p>
-          </div>
-          <div>
-            <FontAwesomeIcon
-              className={styles.fontAwesome}
-              icon={faDatabase}
-              style={{ fontSize: '80px' }}
-            />{' '}
-            <h3>Firebase/MongoDB</h3>
-            <p>{FirebaseMongodb}</p>
-          </div>
-        </div>
+            <div className={styles.techStack}>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  className={styles.fontAwesome}
+                  icon={faNodeJs}
+                  style={{ fontSize: '60px' }}
+                />
+                <h3>NodeJS & ExpressJS</h3>
+                <p style={{ paddingBottom: '60px' }}>{NodejsExpressjs}</p>
+                <div>
+                  <p className={styles.textRight}>
+                    {LinkText}
+                    NodeJS&ExpressJS{LinkTextAfter}
+                  </p>
+                  <FontAwesomeIcon
+                    className={styles.arrowRight}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </a>
+              <a
+                href="https://www.mongodb.com/resources/basics/databases/nosql-explained"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  className={styles.fontAwesome}
+                  icon={faDatabase}
+                  style={{ fontSize: '60px' }}
+                />
+                <h3>Firebase/MongoDB</h3>
+                <p style={{ paddingBottom: '60px' }}>{FirebaseMongodb}</p>
+                <div>
+                  <p className={styles.textRight}>
+                    {LinkText}
+                    Firebase/MongoDB{LinkTextAfter}
+                  </p>
+                  <FontAwesomeIcon
+                    className={styles.arrowRight}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </a>
+            </div>
+          </Box>
+        )}
       </div>
     </div>
   );
