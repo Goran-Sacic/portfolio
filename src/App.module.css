@@ -52,3 +52,9 @@
     margin: 0px;
   }
 }
+
+@media (max-width: 768px) {
+  .app {
+    box-shadow: none;
+  }
+}
