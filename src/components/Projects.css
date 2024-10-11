@@ -13,9 +13,12 @@
 }
 
 @media (max-width: 700px) {
+  .custom-slider-projects .slick-next {
+    right: -17px;
+  }
   .custom-slider-projects .slick-next:before {
     position: relative;
-    left: -15px;
+    left: -12px;
   }
   .custom-slider-projects .slick-prev:before {
     position: relative;
