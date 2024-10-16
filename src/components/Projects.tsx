@@ -16,6 +16,7 @@ import Slider from 'react-slick';
 import Project_WorkoutBuddyImg from '../assets/images/Project_WorkoutBuddy.png';
 import Project_GoGoFoodImg from '../assets/images/Project_GoGoFood.png';
 import Project_CoursesAppImg from '../assets/images/Project_CoursesApp.png';
+import Personal_Finance_Dashboard from '../assets/images/Personal_finance_dashboard.png';
 
 interface ArrowProps {
   className?: string;
@@ -52,7 +53,7 @@ const Projects = () => {
   const languageContext = React.useContext(LanguageContext);
   const { language } = languageContext;
 
-  const { title, GoGoFood, WorkoutBuddy, CoursesApp } =
+  const { title, GoGoFood, WorkoutBuddy, CoursesApp, FinanceDashboard } =
     projectsTexts[language] || projectsTexts['eng'];
 
   const settings = {
@@ -80,7 +81,7 @@ const Projects = () => {
               <div className={styles.projectInfo}>
                 <a
                   href="https://workout-buddy-0-1-0-frontend.onrender.com/"
-                  target="_blank"
+                  target="_self"
                   rel="noreferrer"
                 >
                   <h1>{WorkoutBuddy.title}</h1>
@@ -90,7 +91,7 @@ const Projects = () => {
                 <div className={styles.socials}>
                   <a
                     href="https://github.com/Goran-Sacic/workout-buddy-0.1.0-frontend"
-                    target="_blank"
+                    target="_self"
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
@@ -100,7 +101,7 @@ const Projects = () => {
                   </a>
                   <a
                     href="https://workout-buddy-0-1-0-frontend.onrender.com/"
-                    target="_blank"
+                    target="_self"
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
@@ -118,7 +119,7 @@ const Projects = () => {
               <div className={styles.projectInfo}>
                 <a
                   href="https://food-order-app-gs.netlify.app/"
-                  target="_blank"
+                  target="_self"
                   rel="noreferrer"
                 >
                   <h1>{GoGoFood.title}</h1>
@@ -128,7 +129,7 @@ const Projects = () => {
                 <div className={styles.socials}>
                   <a
                     href="https://github.com/Goran-Sacic/food-order-app"
-                    target="_blank"
+                    target="_self"
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
@@ -138,7 +139,7 @@ const Projects = () => {
                   </a>
                   <a
                     href="https://food-order-app-gs.netlify.app/"
-                    target="_blank"
+                    target="_self"
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
@@ -156,7 +157,7 @@ const Projects = () => {
               <div className={styles.projectInfo}>
                 <a
                   href="https://courses-app-6d92.onrender.com/"
-                  target="_blank"
+                  target="_self"
                   rel="noreferrer"
                 >
                   <h1>{CoursesApp.title}</h1>
@@ -166,7 +167,7 @@ const Projects = () => {
                 <div className={styles.socials}>
                   <a
                     href="https://github.com/Goran-Sacic/courses-app-frontend"
-                    target="_blank"
+                    target="_self"
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
@@ -176,7 +177,45 @@ const Projects = () => {
                   </a>
                   <a
                     href="https://courses-app-6d92.onrender.com/"
-                    target="_blank"
+                    target="_self"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={styles.fontAwesome}
+                      icon={faGlobe}
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className={styles.project}>
+              <img src={Personal_Finance_Dashboard} />
+              <div className={styles.projectInfo}>
+                <a
+                  href="https://courses-app-6d92.onrender.com/"
+                  target="_self"
+                  rel="noreferrer"
+                >
+                  <h1>{FinanceDashboard.title}</h1>
+                </a>
+                <p>{FinanceDashboard.description}</p>
+                <p>{FinanceDashboard.techStack}</p>
+                <div className={styles.socials}>
+                  <a
+                    href="https://github.com/Goran-Sacic/personal-finance-dashboard"
+                    target="_self"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={styles.fontAwesome}
+                      icon={faGithub}
+                    />
+                  </a>
+                  <a
+                    href="https://personalfinancedashboard-gs.netlify.app/"
+                    target="_self"
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon

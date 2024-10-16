@@ -5,10 +5,11 @@ interface ProjectsTexts {
 }
 
 interface Projects {
+  title: string;
   GoGoFood: ProjectsTexts;
   WorkoutBuddy: ProjectsTexts;
   CoursesApp: ProjectsTexts;
-  title: string;
+  FinanceDashboard: ProjectsTexts;
 }
 
 interface SupportedLanguages {
@@ -37,6 +38,12 @@ const projectsTexts: SupportedLanguages = {
         'An application for displaying educational programs. Allows setting the title, duration, and author. Includes editing capabilities. Dummy admin credentials are available for testing.',
       techStack: 'ReactJS (Redux, Router, Axios), TypeScript',
     },
+    FinanceDashboard: {
+      title: 'Finance Dashboard',
+      description:
+        'Frontend for a personal finance dashboard for tracking income and expenses.',
+      techStack: 'Next.js, shadcn, TailwindCSS',
+    },
   },
   cro: {
     title: 'Nekoliko primjera radova...',
@@ -57,6 +64,12 @@ const projectsTexts: SupportedLanguages = {
       description:
         'Aplikacija za prikaz obrazovnih programa. Dopušta postavljanje naslova, trajanja i autora te uključuje mogućnosti uređivanja. Lažne administratorske vjerodajnice dostupne su za testiranje.',
       techStack: 'ReactJS (Redux, Router, Axios), TypeScript',
+    },
+    FinanceDashboard: {
+      title: 'Nadzorna ploča za financije',
+      description:
+        'Frontend za nadzornu ploču za osobne financije za praćenje prihoda i rashoda.',
+      techStack: 'Next.js, shadcn, TailwindCSS',
     },
   },
 };
