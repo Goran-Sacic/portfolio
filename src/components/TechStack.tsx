@@ -59,6 +59,7 @@ const TechStack = () => {
     React,
     NodejsExpressjs,
     FirebaseMongodb,
+    SqlPostgresql,
   } = techStackTexts[language] || techStackTexts['eng'];
 
   const [value, setValue] = useState(0);
@@ -287,6 +288,29 @@ const TechStack = () => {
                     />
                   </div>
                 </a>
+                <a
+                  href="https://aws.amazon.com/what-is/sql/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    className={styles.fontAwesome}
+                    icon={faDatabase}
+                    style={{ fontSize: '60px' }}
+                  />{' '}
+                  <h3>SQL/PostgreSQL</h3>
+                  <p>{SqlPostgresql}</p>
+                  <div>
+                    <p className={styles.textRight}>
+                      {LinkText}
+                      SQL/PostgreSQL{LinkTextAfter}
+                    </p>
+                    <FontAwesomeIcon
+                      className={styles.arrowRight}
+                      icon={faArrowRight}
+                    />
+                  </div>
+                </a>
               </div>
             </CustomTabPanel>
           </Box>
@@ -465,6 +489,29 @@ const TechStack = () => {
                   <p className={styles.textRight}>
                     {LinkText}
                     Firebase/MongoDB{LinkTextAfter}
+                  </p>
+                  <FontAwesomeIcon
+                    className={styles.arrowRight}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </a>
+              <a
+                href="https://aws.amazon.com/what-is/sql/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  className={styles.fontAwesome}
+                  icon={faDatabase}
+                  style={{ fontSize: '60px' }}
+                />
+                <h3>SQL/PostgreSQL</h3>
+                <p style={{ paddingBottom: '60px' }}>{SqlPostgresql}</p>
+                <div>
+                  <p className={styles.textRight}>
+                    {LinkText}
+                    SQL/PostgreSQL{LinkTextAfter}
                   </p>
                   <FontAwesomeIcon
                     className={styles.arrowRight}

@@ -7,6 +7,7 @@ interface TechStackTexts {
   React: string;
   NodejsExpressjs: string;
   FirebaseMongodb: string;
+  SqlPostgresql: string;
 }
 
 interface SupportedLanguages {
@@ -27,6 +28,8 @@ const techStackTexts: SupportedLanguages = {
       'Proficient in building robust server-side applications with Node.js and Express.js, ensuring efficient performance and smooth API integration for seamless web functionality.',
     FirebaseMongodb:
       'Skilled in utilizing Firebase and MongoDB for efficient database management, enabling dynamic, real-time data handling and secure backend infrastructure.',
+    SqlPostgresql:
+      'Proficient in SQL and PostgreSQL; utilizing pgAdmin and PostgreSQL for efficient management and querying of relational databases, as well as for in-depth data analysis.',
   },
   cro: {
     LinkText: 'Više o ',
@@ -40,6 +43,8 @@ const techStackTexts: SupportedLanguages = {
       'Vještina izrade robusnih aplikacija na strani poslužitelja koristeći Node.js i Express.js, osiguravajući učinkovitu izvedbu i glatku API integraciju za besprijekornu web funkcionalnost.',
     FirebaseMongodb:
       'Znanje u korištenju Firebase-a i MongoDB-a za učinkovito upravljanje bazama podataka, omogućavajući dinamičko rukovanje podacima u stvarnom vremenu i sigurnu pozadinsku infrastrukturu.',
+    SqlPostgresql:
+      'Vješt u SQL-u i PostgreSQL-u; korištenje pgAdmin i PostgreSQL-a za učinkovito upravljanje i pretraživanje relacijskih baza podataka te za dubinsku analizu podataka.',
   },
 };
 
