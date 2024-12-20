@@ -49,7 +49,7 @@ const projectsTexts: SupportedLanguages = {
       title: 'Pomodoro App',
       description:
         'A productivity app designed to help you manage time effectively using the Pomodoro technique. Add tasks, track your stats, and view your activity log.',
-      techStack: 'NextJS, Material UI',
+      techStack: 'Next.js, Material UI',
     },
   },
   cro: {
@@ -82,7 +82,7 @@ const projectsTexts: SupportedLanguages = {
       title: 'Pomodoro Aplikacija',
       description:
         'Aplikacija za produktivnost dizajnirana kako bi vam pomogla da učinkovito upravljate vremenom koristeći tehniku Pomodoro. Dodajte zadatke, pratite statistike i pregledajte dnevnik aktivnosti.',
-      techStack: 'ReactJS, Material UI',
+      techStack: 'Next.js, Material UI',
     },
   },
 };
