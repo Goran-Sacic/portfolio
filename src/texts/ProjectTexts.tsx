@@ -10,6 +10,7 @@ interface Projects {
   WorkoutBuddy: ProjectsTexts;
   CoursesApp: ProjectsTexts;
   FinanceDashboard: ProjectsTexts;
+  Pomodoro: ProjectsTexts;
 }
 
 interface SupportedLanguages {
@@ -44,6 +45,12 @@ const projectsTexts: SupportedLanguages = {
         'Frontend for a personal finance dashboard for tracking income and expenses.',
       techStack: 'Next.js, shadcn, TailwindCSS',
     },
+    Pomodoro: {
+      title: 'Pomodoro App',
+      description:
+        'A productivity app designed to help you manage time effectively using the Pomodoro technique. Add tasks, track your stats, and view your activity log.',
+      techStack: 'NextJS, Material UI',
+    },
   },
   cro: {
     title: 'Nekoliko primjera radova...',
@@ -70,6 +77,12 @@ const projectsTexts: SupportedLanguages = {
       description:
         'Frontend za nadzornu ploču za osobne financije za praćenje prihoda i rashoda.',
       techStack: 'Next.js, shadcn, TailwindCSS',
+    },
+    Pomodoro: {
+      title: 'Pomodoro Aplikacija',
+      description:
+        'Aplikacija za produktivnost dizajnirana kako bi vam pomogla da učinkovito upravljate vremenom koristeći tehniku Pomodoro. Dodajte zadatke, pratite statistike i pregledajte dnevnik aktivnosti.',
+      techStack: 'ReactJS, Material UI',
     },
   },
 };

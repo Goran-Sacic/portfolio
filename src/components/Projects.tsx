@@ -17,6 +17,7 @@ import Project_WorkoutBuddyImg from '../assets/images/Project_WorkoutBuddy.png';
 import Project_GoGoFoodImg from '../assets/images/Project_GoGoFood.png';
 import Project_CoursesAppImg from '../assets/images/Project_CoursesApp.png';
 import Personal_Finance_Dashboard from '../assets/images/Personal_finance_dashboard.png';
+import PomodoroImg from '../assets/images/Pomodoro.png';
 
 interface ArrowProps {
   className?: string;
@@ -53,8 +54,14 @@ const Projects = () => {
   const languageContext = React.useContext(LanguageContext);
   const { language } = languageContext;
 
-  const { title, GoGoFood, WorkoutBuddy, CoursesApp, FinanceDashboard } =
-    projectsTexts[language] || projectsTexts['eng'];
+  const {
+    title,
+    GoGoFood,
+    WorkoutBuddy,
+    CoursesApp,
+    FinanceDashboard,
+    Pomodoro,
+  } = projectsTexts[language] || projectsTexts['eng'];
 
   const settings = {
     dots: true,
@@ -215,6 +222,44 @@ const Projects = () => {
                   </a>
                   <a
                     href="https://personalfinancedashboard-gs.netlify.app/"
+                    target="_self"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={styles.fontAwesome}
+                      icon={faGlobe}
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className={styles.project}>
+              <img src={PomodoroImg} />
+              <div className={styles.projectInfo}>
+                <a
+                  href="https://pomodoro-gs.netlify.app/"
+                  target="_self"
+                  rel="noreferrer"
+                >
+                  <h1>{Pomodoro.title}</h1>
+                </a>
+                <p>{Pomodoro.description}</p>
+                <p>{Pomodoro.techStack}</p>
+                <div className={styles.socials}>
+                  <a
+                    href="https://github.com/Goran-Sacic/pomodoro"
+                    target="_self"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={styles.fontAwesome}
+                      icon={faGithub}
+                    />
+                  </a>
+                  <a
+                    href="https://pomodoro-gs.netlify.app/"
                     target="_self"
                     rel="noreferrer"
                   >
