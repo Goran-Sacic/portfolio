@@ -18,6 +18,7 @@ import Project_GoGoFoodImg from '../assets/images/Project_GoGoFood.png';
 import Project_CoursesAppImg from '../assets/images/Project_CoursesApp.png';
 import Personal_Finance_Dashboard from '../assets/images/Personal_finance_dashboard.png';
 import PomodoroImg from '../assets/images/Pomodoro.png';
+import RadioMaster5000img from '../assets/images/radiomaster5000.png';
 
 interface ArrowProps {
   className?: string;
@@ -61,6 +62,7 @@ const Projects = () => {
     CoursesApp,
     FinanceDashboard,
     Pomodoro,
+    RadioMaster5000,
   } = projectsTexts[language] || projectsTexts['eng'];
 
   const settings = {
@@ -260,6 +262,34 @@ const Projects = () => {
                   </a>
                   <a
                     href="https://pomodoro-gs.netlify.app/"
+                    target="_self"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={styles.fontAwesome}
+                      icon={faGlobe}
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className={styles.project}>
+              <img src={RadioMaster5000img} />
+              <div className={styles.projectInfo}>
+                <a
+                  href="https://radio-master-5000.fly.dev/"
+                  target="_self"
+                  rel="noreferrer"
+                >
+                  <h1>{RadioMaster5000.title}</h1>
+                </a>
+                <p>{RadioMaster5000.description}</p>
+                <p>{RadioMaster5000.techStack}</p>
+                <div className={styles.socials}>
+                  <a
+                    href="https://radio-master-5000.fly.dev/"
                     target="_self"
                     rel="noreferrer"
                   >

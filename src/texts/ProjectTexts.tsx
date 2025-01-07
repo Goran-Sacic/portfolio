@@ -11,6 +11,7 @@ interface Projects {
   CoursesApp: ProjectsTexts;
   FinanceDashboard: ProjectsTexts;
   Pomodoro: ProjectsTexts;
+  RadioMaster5000: ProjectsTexts;
 }
 
 interface SupportedLanguages {
@@ -51,6 +52,13 @@ const projectsTexts: SupportedLanguages = {
         'A productivity app designed to help you manage time effectively using the Pomodoro technique. Add tasks, track your stats, and view your activity log.',
       techStack: 'Next.js, Material UI',
     },
+    RadioMaster5000: {
+      title: 'RadioMaster5000',
+      description:
+        'Browse various radio stations by genre or country (currently WIP).',
+      techStack:
+        'ReactJS (Vite), Express, Material UI, Fly.io, React H5 Audio Player',
+    },
   },
   cro: {
     title: 'Nekoliko primjera radova...',
@@ -83,6 +91,13 @@ const projectsTexts: SupportedLanguages = {
       description:
         'Aplikacija za produktivnost dizajnirana kako bi vam pomogla da učinkovito upravljate vremenom koristeći tehniku Pomodoro. Dodajte zadatke, pratite statistike i pregledajte dnevnik aktivnosti.',
       techStack: 'Next.js, Material UI',
+    },
+    RadioMaster5000: {
+      title: 'RadioMaster5000',
+      description:
+        'Pregledajte različite radio stanice po žanru ili državi (trenutno u razvoju).',
+      techStack:
+        'ReactJS (Vite), Express, Material UI, Fly.io, React H5 Audio Player',
     },
   },
 };
