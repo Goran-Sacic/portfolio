@@ -18,7 +18,7 @@ import Project_GoGoFoodImg from '../assets/images/Project_GoGoFood.png';
 import Project_CoursesAppImg from '../assets/images/Project_CoursesApp.png';
 import Personal_Finance_Dashboard from '../assets/images/Personal_finance_dashboard.png';
 import PomodoroImg from '../assets/images/Pomodoro.png';
-import RadioMaster5000img from '../assets/images/radiomaster5000.png';
+import RadioMaster5000img from '../assets/images/radiomaster5000_2.png';
 
 interface ArrowProps {
   className?: string;

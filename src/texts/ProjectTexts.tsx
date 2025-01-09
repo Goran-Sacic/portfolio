@@ -54,8 +54,7 @@ const projectsTexts: SupportedLanguages = {
     },
     RadioMaster5000: {
       title: 'RadioMaster5000',
-      description:
-        'Browse various radio stations by genre or country (currently WIP).',
+      description: 'Browse various radio stations by genre or country.',
       techStack:
         'ReactJS (Vite), Express, Material UI, Fly.io, React H5 Audio Player',
     },
@@ -93,9 +92,8 @@ const projectsTexts: SupportedLanguages = {
       techStack: 'Next.js, Material UI',
     },
     RadioMaster5000: {
-      title: 'RadioMaster5000',
-      description:
-        'Pregledajte različite radio stanice po žanru ili državi (trenutno u razvoju).',
+      title: 'Radio Master 5000',
+      description: 'Pregledajte različite radio stanice po žanru ili državi.',
       techStack:
         'ReactJS (Vite), Express, Material UI, Fly.io, React H5 Audio Player',
     },
