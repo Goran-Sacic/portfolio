@@ -12,9 +12,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import Project_CateringApp from '../assets/images/cateringapp.webp';
-import Project_RadioApp from '../assets/images/radioapp.webp';
-import Project_ConstructionWebsite from '../assets/images/ztbgradnja.webp';
+import Project_CateringApp from '../assets/images/cateringapp1.webp';
+import Project_RadioApp from '../assets/images/radioapp1.webp';
+import Project_ConstructionWebsite from '../assets/images/ztbgradnja1.webp';
 
 const Projects = () => {
   const languageContext = React.useContext(LanguageContext);
