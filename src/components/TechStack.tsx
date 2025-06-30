@@ -1,14 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react';
 import styles from './TechStack.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faHtml5,
-  faJs,
-  faReact,
-  faNodeJs,
-  faCss3,
-} from '@fortawesome/free-brands-svg-icons';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
+import { faJs, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faPenNib } from '@fortawesome/free-solid-svg-icons';
 import 'animate.css/animate.compat.css';
 import { LanguageContext } from '../contexts/LanguageContext';
 import techStackTexts from '../texts/TechStackTexts';
@@ -53,8 +47,6 @@ const TechStack = () => {
   const {
     LinkText,
     LinkTextAfter,
-    Html,
-    Css,
     JsTs,
     React,
     NodejsExpressjs,
@@ -149,54 +141,6 @@ const TechStack = () => {
             <CustomTabPanel value={value} index={0}>
               <div className={styles.techStack}>
                 <a
-                  href="https://kinsta.com/knowledgebase/what-is-html/#what-is-html"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon
-                    className={styles.fontAwesome}
-                    icon={faHtml5}
-                    style={{
-                      fontSize: '60px',
-                    }}
-                  />
-                  <h3>HTML</h3>
-                  <p>{Html}</p>
-                  <div>
-                    <p className={styles.textRight}>
-                      {LinkText}
-                      HTML{LinkTextAfter}
-                    </p>
-                    <FontAwesomeIcon
-                      className={styles.arrowRight}
-                      icon={faArrowRight}
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://en.wikipedia.org/wiki/CSS"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon
-                    className={styles.fontAwesome}
-                    icon={faCss3}
-                    style={{ fontSize: '60px' }}
-                  />{' '}
-                  <h3>CSS</h3>
-                  <p>{Css}</p>
-                  <div>
-                    <p className={styles.textRight}>
-                      {LinkText}
-                      CSS{LinkTextAfter}
-                    </p>
-                    <FontAwesomeIcon
-                      className={styles.arrowRight}
-                      icon={faArrowRight}
-                    />
-                  </div>
-                </a>
-                <a
                   href="https://hygraph.com/blog/typescript-vs-javascript"
                   target="_blank"
                   rel="noreferrer"
@@ -231,6 +175,25 @@ const TechStack = () => {
                     <p className={styles.textRight}>
                       {LinkText}
                       React{LinkTextAfter}
+                    </p>
+                    <FontAwesomeIcon
+                      className={styles.arrowRight}
+                      icon={faArrowRight}
+                    />
+                  </div>
+                </a>
+                <a href="https://mui.com/" target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon
+                    className={styles.fontAwesome}
+                    icon={faPenNib}
+                    style={{ fontSize: '60px' }}
+                  />{' '}
+                  <h3>UI/UX</h3>
+                  <p>{JsTs}</p>
+                  <div>
+                    <p className={styles.textRight}>
+                      {LinkText}
+                      UI/UX{LinkTextAfter}
                     </p>
                     <FontAwesomeIcon
                       className={styles.arrowRight}
@@ -338,52 +301,6 @@ const TechStack = () => {
             </Box>
             <div className={styles.techStack}>
               <a
-                href="https://kinsta.com/knowledgebase/what-is-html/#what-is-html"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon
-                  className={styles.fontAwesome}
-                  icon={faHtml5}
-                  style={{ fontSize: '60px' }}
-                />
-                <h3>HTML</h3>
-                <p style={{ paddingBottom: '60px' }}>{Html}</p>
-                <div>
-                  <p className={styles.textRight}>
-                    {LinkText}
-                    HTML{LinkTextAfter}
-                  </p>
-                  <FontAwesomeIcon
-                    className={styles.arrowRight}
-                    icon={faArrowRight}
-                  />
-                </div>
-              </a>
-              <a
-                href="https://en.wikipedia.org/wiki/CSS"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon
-                  className={styles.fontAwesome}
-                  icon={faCss3}
-                  style={{ fontSize: '60px' }}
-                />
-                <h3>CSS</h3>
-                <p style={{ paddingBottom: '60px' }}>{Css}</p>
-                <div>
-                  <p className={styles.textRight}>
-                    {LinkText}
-                    CSS{LinkTextAfter}
-                  </p>
-                  <FontAwesomeIcon
-                    className={styles.arrowRight}
-                    icon={faArrowRight}
-                  />
-                </div>
-              </a>
-              <a
                 href="https://hygraph.com/blog/typescript-vs-javascript"
                 target="_blank"
                 rel="noreferrer"
@@ -418,6 +335,25 @@ const TechStack = () => {
                   <p className={styles.textRight}>
                     {LinkText}
                     React{LinkTextAfter}
+                  </p>
+                  <FontAwesomeIcon
+                    className={styles.arrowRight}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </a>
+              <a href="https://mui.com/" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon
+                  className={styles.fontAwesome}
+                  icon={faPenNib}
+                  style={{ fontSize: '60px' }}
+                />{' '}
+                <h3>UI/UX</h3>
+                <p>{JsTs}</p>
+                <div>
+                  <p className={styles.textRight}>
+                    {LinkText}
+                    UI/UX{LinkTextAfter}
                   </p>
                   <FontAwesomeIcon
                     className={styles.arrowRight}

@@ -24,11 +24,11 @@
 }
 
 .mainContent h1 {
-  font-size: 75px;
+  font-size: 65px;
 }
 
 .mainContent h2 {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: normal;
 }
 
@@ -174,7 +174,7 @@
 }
 
 .title {
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: 500;
   padding-left: 40px;
   padding-bottom: 20px;

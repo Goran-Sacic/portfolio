@@ -1,10 +1,9 @@
 interface TechStackTexts {
   LinkText: string;
   LinkTextAfter: string;
-  Html: string;
-  Css: string;
   JsTs: string;
   React: string;
+  UIAndUX: string;
   NodejsExpressjs: string;
   FirebaseMongodb: string;
   SqlPostgresql: string;
@@ -19,32 +18,33 @@ const techStackTexts: SupportedLanguages = {
   eng: {
     LinkText: 'Learn more about ',
     LinkTextAfter: '',
-    Html: 'Proficient in crafting visually appealing websites using HTML, focusing on optimal user experience through proper content organization.',
-    Css: 'Expert in CSS, capable of designing responsive and visually engaging layouts to enhance user interfaces.',
-    JsTs: 'Expertise in JavaScript and TypeScript, building interactive and dynamic web applications with a focus on seamless user interaction and functionality.',
+    JsTs: 'Strong knowledge of JavaScript and TypeScript used across fullstack apps. Confident in building complex UI logic, API interaction, and data validation.',
     React:
-      'Advanced proficiency in React/NextJS/Vite, developing efficient and optimized front-end applications with a strong emphasis on component-based architecture.',
+      'Advanced experience with React, Next.js, Vite, and libraries like TanStack Router, Zustand, MaterialUI, and Motion. Built production-ready apps with client-side filtering, CMS integration, and mobile-friendly UI.',
+    UIAndUX:
+      'Skilled in building accessible and responsive UIs with Material UI, ShadCN, Headless UI, and Motion.',
     NodejsExpressjs:
-      'Proficient in building robust server-side applications with Node.js and Express.js, ensuring efficient performance and smooth API integration for seamless web functionality.',
+      'Built scalable backends with Node.js and Express, including REST APIs, authentication flows, server-side logic, and secure file handling for projects like catering and CMS platforms.',
     FirebaseMongodb:
-      'Skilled in utilizing Firebase and MongoDB for efficient database management, enabling dynamic, real-time data handling and secure backend infrastructure.',
+      'Used Firebase Auth and MongoDB for real-time data and authentication in earlier fullstack projects. Familiar with Firestore, rules, and client SDKs.',
     SqlPostgresql:
-      'Proficient in SQL and PostgreSQL; utilizing pgAdmin and PostgreSQL for efficient management and querying of relational databases, as well as for in-depth data analysis.',
+      'Experienced in PostgreSQL with Supabase. Designed normalized schemas, handled many-to-many relationships, and implemented secure data queries for production systems like the catering app and CMS.',
   },
   cro: {
     LinkText: 'Više o ',
     LinkTextAfter: '-u',
-    Html: 'Stručan u izradi vizualno privlačnih web stranica koristeći HTML, s naglaskom na optimalno korisničko iskustvo kroz pravilnu organizaciju sadržaja.',
-    Css: 'Stručnjak za CSS, sposoban dizajnirati responzivne i vizualno atraktivne izglede za poboljšanje korisničkih sučelja.',
-    JsTs: 'Stručnost u JavaScriptu i TypeScriptu, izgradnja interaktivnih i dinamičnih web aplikacija s fokusom na besprijekornu korisničku interakciju i funkcionalnost.',
+    JsTs: 'Odlično poznavanje JavaScript-a i TypeScript-a korišteno u fullstack aplikacijama. Izrada složene UI logike, API integracija i validacija podataka.',
     React:
-      'Napredno poznavanje React/NextJS/Vite, razvoj učinkovitih i optimiziranih front-end aplikacija s jakim naglaskom na arhitekturu temeljenu na komponentama.',
+      'Napredno korištenje React-a, Next.js-a i Vite-a te alata poput TanStack Router, Zustand, MaterialUI i Motion. Razvijene aplikacije s filtriranjem, CMS integracijom i prilagodbom za mobilne uređaje.',
+    UIAndUX:
+      'Iskusan u izradi pristupačnih i responzivnih korisničkih sučelja koristeći Material UI, ShadCN, Headless UI i Motion.',
+
     NodejsExpressjs:
-      'Vještina izrade robusnih aplikacija na strani poslužitelja koristeći Node.js i Express.js, osiguravajući učinkovitu izvedbu i glatku API integraciju za besprijekornu web funkcionalnost.',
+      'Razvijeni skalabilni backendovi pomoću Node.js i Express-a s REST API-ima, autentifikacijom, server-side logikom i sigurnim rukovanjem datotekama.',
     FirebaseMongodb:
-      'Znanje u korištenju Firebase-a i MongoDB-a za učinkovito upravljanje bazama podataka, omogućavajući dinamičko rukovanje podacima u stvarnom vremenu i sigurnu pozadinsku infrastrukturu.',
+      'Firebase i MongoDB korišteni za autentifikaciju i rad s podacima u realnom vremenu u ranim projektima. Poznavanje Firestore baze i sigurnosnih pravila.',
     SqlPostgresql:
-      'Vješt u SQL-u i PostgreSQL-u; korištenje pgAdmin i PostgreSQL-a za učinkovito upravljanje i pretraživanje relacijskih baza podataka te za dubinsku analizu podataka.',
+      'Iskustvo s PostgreSQL-om i Supabase-om. Dizajnirane relacijske sheme, povezane više na više (many-to-many) relacije i sigurne upite za aplikacije poput catering sustava i CMS-a.',
   },
 };
 

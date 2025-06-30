@@ -35,17 +35,16 @@ const developmentPrinciplesTexts: SupportedLanguages = {
     performanceOptimization: {
       title: 'Performance optimization',
       description:
-        'Building fast-loading, optimized web applications by utilizing efficient code and following best practices to enhance performance.',
+        'Deliver fast, efficient apps by writing clean code, reducing bundle size, and following best practices for speed and performance.',
       imgSrc: frontendCodeImg,
-      imgAlt: 'Image depicting some well-written frontend code',
+      imgAlt: 'Example of clean and optimized frontend code.',
     },
     responsiveDesign: {
       title: 'Responsive design',
       description:
         'Designing and developing web pages that adapt seamlessly to any screen size, ensuring an optimal user experience on all devices, from mobile phones to desktops.',
       imgSrc: responsiveDesignImg,
-      imgAlt:
-        'Responsive design image featuring three screen sizes: tablet, laptop and mobile phone',
+      imgAlt: 'Responsive layout displayed on tablet, laptop, and phone.',
     },
     seoOptimization: {
       title: 'SEO optimization',
@@ -58,10 +57,9 @@ const developmentPrinciplesTexts: SupportedLanguages = {
     accessibility: {
       title: 'Accessibility',
       description:
-        'Ensuring web applications are inclusive and usable by people of all abilities by following accessibility standards like WCAG and implementing features such as keyboard navigation and screen reader compatibility.',
+        'Making digital experiences inclusive by implementing keyboard navigation, screen reader support, and WCAG-compliant features.',
       imgSrc: accessibilityImg,
-      imgAlt:
-        'An image showing depicting a silhouette of a person, contained withing a black circle.',
+      imgAlt: 'Accessibility symbol showing a person within a circle.',
     },
   },
   cro: {
@@ -71,17 +69,16 @@ const developmentPrinciplesTexts: SupportedLanguages = {
     performanceOptimization: {
       title: 'Optimizacija performansi',
       description:
-        'Izrada optimiziranih web aplikacija koje se brzo učitavaju zahvaljujući učinkovitom kodu i praćenju najboljih praksi za poboljšanje performansi.',
+        'Isporučujem brze i učinkovite aplikacije pisanjem čistog koda, smanjenjem veličine paketa i praćenjem najboljih praksi.',
       imgSrc: frontendCodeImg,
-      imgAlt: 'Slika koja prikazuje neki dobro napisani Frontend kod',
+      imgAlt: 'Primjer čistog i optimiziranog frontend koda.',
     },
     responsiveDesign: {
       title: 'Responzivni dizajn',
       description:
         'Dizajniranje i razvoj web stranica koje se besprijekorno prilagođavaju bilo kojoj veličini zaslona, osiguravajući optimalno korisničko iskustvo na svim uređajima, od mobilnih telefona do stolnih računala.',
       imgSrc: responsiveDesignImg,
-      imgAlt:
-        'Slika s prikazom responzivnog dizajna na ukupno tri veličine zaslona: tablet, prijenosno računalo i mobilni telefon',
+      imgAlt: 'Prikaz responzivnog dizajna na tabletu, laptopu i mobitelu.',
     },
     seoOptimization: {
       title: 'SEO optimizacija',
@@ -94,9 +91,9 @@ const developmentPrinciplesTexts: SupportedLanguages = {
     accessibility: {
       title: 'Pristupačnost',
       description:
-        'Osiguravanje da su web aplikacije inkluzivne i da ih mogu koristiti osobe svih sposobnosti, slijedeći standarde pristupačnosti poput WCAG i implementirajući značajke kao što su navigacija putem tipkovnice i kompatibilnost s čitačima zaslona.',
+        'Uključiv dizajn koji omogućuje korištenje aplikacija svima – s podrškom za tipkovnicu, čitače ekrana i WCAG standarde.',
       imgSrc: accessibilityImg,
-      imgAlt: 'Slika koja prikazuje siluetu osobe unutar crnog kruga.',
+      imgAlt: 'Simbol pristupačnosti – osoba unutar kruga.',
     },
   },
 };

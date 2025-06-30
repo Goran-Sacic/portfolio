@@ -11,13 +11,13 @@ interface SupportedLanguages {
 
 const homeTexts: SupportedLanguages = {
   eng: {
-    title: `I'm Goran`,
-    description: 'Frontend developer',
+    title: `Hi, I'm Goran`,
+    description: 'Fullstack developer',
     flavourText: 'Turning ideas into creative reality',
   },
   cro: {
-    title: 'Ja sam Goran',
-    description: 'Frontend developer',
+    title: 'Bok, ja sam Goran',
+    description: 'Fullstack developer',
     flavourText: 'Pretvaram ideje u kreativnu stvarnost',
   },
 };
